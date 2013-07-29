@@ -1,4 +1,4 @@
-var intersect = require('./merge-intersect');
+var intersect = require('./index');
 var assert = require('assert');
 
 assert.deepEqual(intersect([
