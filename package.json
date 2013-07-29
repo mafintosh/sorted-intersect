@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "repository": "git://github.com/mafintosh/sorted-intersect",
   "license": "MIT",
-  "description": "intersect sorted lists",
+  "description": "Intersect sorted lists using merge intersection with galloping lookahead",
   "keywords": ["intersect", "sublinear", "efficient", "intersection", "sorted"],
   "author": "Mathias Buus Madsen <mathiasbuus@gmail.com>",
   "scripts": {
