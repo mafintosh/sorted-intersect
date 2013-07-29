@@ -49,6 +49,7 @@ var intersect = function(lists, opts) {
 	if (opts.offset) offsets[0] = opts.offset;
 	if (opts.marker !== undefined) offsets[0] = gallop(first, opts.marker, offsets[0], 1);
 
+	if (!lists.length) return result;
 	if (lists.length === 1) return first.slice(offsets[0], offsets[0]+limit);
 
 	while (result.length < limit) {
