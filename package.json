@@ -1,0 +1,12 @@
+{
+  "name": "sorted-intersect",
+  "version": "0.1.0",
+  "repository": "git://github.com/mafintosh/sorted-intersect",
+  "license": "MIT",
+  "description": "intersect sorted lists",
+  "keywords": ["intersect", "sublinear", "efficient", "intersection", "sorted"],
+  "author": "Mathias Buus Madsen <mathiasbuus@gmail.com>",
+  "scripts": {
+    "test": "node test.js"
+  }
+}
