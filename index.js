@@ -70,7 +70,7 @@ var intersect = function(lists, opts) {
 					continue;
 				}
 				if (valB > valA) {
-					offsetA = gallop(listA, valB, offsetB, 0);
+					offsetA = gallop(listA, valB, offsetA, 0);
 					continue;
 				}
 
