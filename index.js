@@ -1,6 +1,6 @@
 var noobj = {};
 
-var gallop = function(list, val, offset) {
+var gallop = function(list, val, offset, skip) {
 	if (offset >= list.length) return list.length;
 
 	var inc = 1;
@@ -27,10 +27,13 @@ var gallop = function(list, val, offset) {
 			continue;
 		}
 
-		return mid;
+		return mid + skip;
 	}
 
-	return val > list[low] ? low+1 : low;
+	if (list[low] > val) return low;
+	if (list[low] === val) return low+skip;
+
+	return low+1;
 };
 
 var intersect = function(lists, opts) {
@@ -44,10 +47,7 @@ var intersect = function(lists, opts) {
 	for (var i = 0; i < lists.length; i++) offsets[i] = 0;
 
 	if (opts.offset) offsets[0] = opts.offset;
-	if (opts.marker !== undefined) {
-		offsets[0] = gallop(first, opts.marker, offsets[0]);
-		if (offsets[0] < first.length && first[offsets[0]] === opts.marker) offsets[0]++;
-	}
+	if (opts.marker !== undefined) offsets[0] = gallop(first, opts.marker, offsets[0], 1);
 
 	if (lists.length === 1) return first.slice(offsets[0], offsets[0]+limit);
 
@@ -65,11 +65,11 @@ var intersect = function(lists, opts) {
 				var valB = listB[offsetB];
 
 				if (valA > valB) {
-					offsetB = gallop(listB, valA, offsetB);
+					offsetB = gallop(listB, valA, offsetB, 0);
 					continue;
 				}
 				if (valB > valA) {
-					offsetA = gallop(listA, valB, offsetB);
+					offsetA = gallop(listA, valB, offsetB, 0);
 					continue;
 				}
 
