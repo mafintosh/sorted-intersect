@@ -29,7 +29,8 @@ which can contain the following options
 ``` js
 {
 	limit: number, // limit the result to this number
-	marker: value, // start the intersection a this value
+	marker: value, // start the intersection a this value,
+	offsets: []    // use these list offsets (mutates the array)
 }
 ```
 
