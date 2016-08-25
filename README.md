@@ -4,7 +4,7 @@ Intersect sorted lists using merge intersection with galloping lookahead.
 
 	npm install sorted-intersect
 
-This is useful if you want to (effiently) intersect large sorted lists.
+It is useful if you want to (efficiently) intersect large, sorted lists.
 
 ## Usage
 
