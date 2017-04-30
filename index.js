@@ -66,6 +66,7 @@ var intersect = function(lists, opts) {
 				var valB = listB[offsetB];
 
 				if (valA > valB) {
+					matches = 0;
 					offsetB = gallop(listB, valA, offsetB, 0);
 					continue;
 				}

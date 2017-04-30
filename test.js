@@ -27,6 +27,13 @@ assert.deepEqual(intersect([
 ]), []);
 
 assert.deepEqual(intersect([
+	[1,3],
+	[1,2,3],
+	[1,2,3],
+	[1,2,4]
+]), [1]);
+
+assert.deepEqual(intersect([
 	[1,3,4,5],
 	[3,4,5],
 	[2,3,4,5,6,7]
