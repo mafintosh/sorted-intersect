@@ -1,10 +1,16 @@
 {
   "name": "sorted-intersect",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "repository": "git://github.com/mafintosh/sorted-intersect",
   "license": "MIT",
   "description": "Intersect sorted lists using merge intersection with galloping lookahead",
-  "keywords": ["intersect", "sublinear", "efficient", "intersection", "sorted"],
+  "keywords": [
+    "intersect",
+    "sublinear",
+    "efficient",
+    "intersection",
+    "sorted"
+  ],
   "author": "Mathias Buus Madsen <mathiasbuus@gmail.com>",
   "scripts": {
     "test": "node test.js"
